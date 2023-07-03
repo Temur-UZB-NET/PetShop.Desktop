@@ -1,0 +1,93 @@
+﻿<UserControl x:Class="PetShop.Desktop.Components.Products.ProductControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PetShop.Desktop.Components.Products"
+             mc:Ignorable="d" 
+             d:DesignHeight="280" d:DesignWidth="220"
+             Margin="5">
+
+    <Border Background="#C5DFF8"
+            BorderBrush="#40128B"
+            BorderThickness="2"
+            CornerRadius="20">
+
+        <Grid MouseDown="Grid_MouseDown">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Border BorderBrush="Gray"
+                        CornerRadius="10"
+                        BorderThickness="0"
+                        Width="100"
+                        Height="110"
+                        Margin="10 10 10 0">
+                    <Border.Background>
+                        <ImageBrush x:Name="imgProductControl"/>
+                    </Border.Background>
+                </Border>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.9*"/>
+                    <RowDefinition Height="0.9*"/>
+                    <RowDefinition Height="0.9*"/>
+                    <RowDefinition Height="1.3*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" HorizontalAlignment="Center">
+                    <TextBlock x:Name="tbProductControl"
+                                Text="mdsm"
+                                FontSize="16"
+                                Foreground="#090580"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                               />
+                </Grid>
+
+                <Grid Grid.Row="1" HorizontalAlignment="Center">
+                    <TextBlock x:Name="tbProductControlAge"
+                           Text="jhdffd"
+                           FontSize="16"
+                           Foreground="#090580"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
+                </Grid>
+
+                <Grid Grid.Row="2" HorizontalAlignment="Center"
+                      Margin="0 0 0 10">
+                    <TextBlock x:Name="tbProductControlGender"
+                            Text="sdmsb"
+                            FontSize="16"
+                            Foreground="#090580"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                </Grid>
+
+
+                <Grid Grid.Row="3" HorizontalAlignment="Center"
+                      Margin="0 0 0 10">
+                    <Border x:Name="BtnBuy"
+                            BorderBrush="Aqua"
+                            BorderThickness="1"
+                            Width="80"
+                            Height="25"
+                            MouseDown="BtnBuy_MouseDown"
+                            Background="#00FFCA"
+                            CornerRadius="10">
+                        <TextBlock x:Name="tbBtntxt"
+                                    Text="Buy"
+                                    FontSize="12"
+                                    Foreground="White"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"/>
+                    </Border>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>

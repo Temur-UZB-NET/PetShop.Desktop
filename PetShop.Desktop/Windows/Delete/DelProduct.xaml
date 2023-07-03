@@ -1,0 +1,141 @@
+﻿<Window x:Class="PetShop.Desktop.Windows.Delete.DelProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PetShop.Desktop.Windows.Delete"
+        mc:Ignorable="d"
+        Title="DelProduct"
+        WindowStyle="None"
+        Height="300"
+        Width="400"
+        Background="Transparent"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" >
+        
+
+    <Border BorderBrush="#9BABB8"
+            BorderThickness="2"
+            CornerRadius="20"
+            Background="#F5EFE7">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.4*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Border Width="200"
+                        Height="35"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        CornerRadius="5"
+                        BorderThickness="1"
+                        BorderBrush="Gray">
+                        <TextBox x:Name="tbUpdateName"
+                             Text="dfd"
+                             BorderThickness="0"
+                             Background="Transparent"
+                             Width="140"
+                             Height="30"
+                             VerticalAlignment="Center"
+                             HorizontalAlignment="Center"
+                             Foreground="Gray"
+                             FontSize="18"/>
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <Border Width="200"
+                        Height="35"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        CornerRadius="5"
+                        BorderThickness="1"
+                        BorderBrush="Gray">
+                        <TextBox x:Name="tbUpdateAge"
+                             Text="dfd"
+                             BorderThickness="0"
+                             Background="Transparent"
+                             Width="140"
+                             Height="30"
+                             VerticalAlignment="Center"
+                             HorizontalAlignment="Center"
+                             Foreground="Gray"
+                             FontSize="18"/>
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    <Border Width="200"
+                        Height="35"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        CornerRadius="5"
+                        BorderThickness="1"
+                        BorderBrush="Gray">
+                        <TextBox x:Name="tbUpdateGender"
+                             Text="dfd"
+                             BorderThickness="0"
+                             Background="Transparent"
+                             Width="140"
+                             Height="30"
+                             VerticalAlignment="Center"
+                             HorizontalAlignment="Center"
+                             Foreground="Gray"
+                             FontSize="18"/>
+                    </Border>
+                </Grid>
+
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <Border x:Name="btnDeleteProduct"
+                            Width="100"
+                            Height="35"
+                            Background="#CD1818"
+                            CornerRadius="10"
+                            MouseDown="btnDeleteProduct_MouseDown_1"
+                            >
+                        <TextBlock Text="Delete"
+                                   Foreground="White"
+                                   FontSize="16"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   />
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <Border x:Name="btnSave"
+                            Width="100"
+                            Height="35"
+                            Background="#00DFA2"
+                            CornerRadius="10"
+                            MouseDown="btnSave_MouseDown"
+                            >
+                        <TextBlock Text="Save"
+                                   Foreground="White"
+                                   FontSize="16"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   />
+                    </Border>
+                </Grid>
+            </Grid>
+
+        </Grid>
+    </Border>
+</Window>

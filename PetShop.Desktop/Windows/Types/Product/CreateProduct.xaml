@@ -1,0 +1,338 @@
+﻿<Window x:Class="PetShop.Desktop.Windows.Types.Product.CreateProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PetShop.Desktop.Windows.Types.Product"
+        mc:Ignorable="d"
+        Title="CreateProduct" 
+        Height="450"
+        Width="600"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Border BorderBrush="Gray"
+                BorderThickness="0"
+                Margin="30"
+                CornerRadius="20"
+                Background="#EAEAEA">
+
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="20" BlurRadius="30"/>
+            </Border.Effect>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.7*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.4*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+                            <Border BorderBrush="Gray"
+                                BorderThickness="1"
+                                Width="120"
+                                Height="150">
+                                <Border.Background>
+                                    <ImageBrush x:Name="ImgBImage" />
+                                </Border.Background>
+                            </Border>
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+                            <Border x:Name="ImgPathPr"
+                                    BorderBrush="Gray"
+                                    BorderThickness="1"
+                                    Width="35"
+                                    Height="35"
+                                    VerticalAlignment="Bottom"
+                                    Margin="0 0 0 22"
+                                    HorizontalAlignment="Left"
+                                    MouseDown="ImgPathPr_MouseDown"
+                                    >
+                                <Border.Background>
+                                    <ImageBrush ImageSource="/Assets/Images/IconPhoto.png"/>
+                                </Border.Background>
+                                
+                            </Border>
+                        </Grid>
+                    </Grid>
+
+
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.4*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <TextBlock Text="Name..."
+                                           VerticalAlignment="Bottom"
+                                           HorizontalAlignment="Left"
+                                           Margin="35 0 0 0"
+                                           Foreground="Gray"
+                                           FontSize="16"
+                                           >
+                                    
+                                </TextBlock>
+                            </Grid>
+                            
+                            <Grid Grid.Row="1">
+                                <Border BorderBrush="Gray"
+                                    BorderThickness="1"
+                                    CornerRadius="10"
+                                    Width="250"
+                                    Height="35">
+                                    <TextBox x:Name="tbNameProduct"
+                                         VerticalAlignment="Center"
+                                         FontSize="18"
+                                         Foreground="Gray"
+                                         Padding="10 0 10 0"
+                                         BorderThickness="0"
+                                         Background="Transparent"
+                                         >
+
+                                    </TextBox>
+                                </Border>
+                            </Grid>
+                        </Grid>
+
+                        <Grid Grid.Row="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.5*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <TextBlock Text="TypeId"
+                                           VerticalAlignment="Bottom"
+                                           HorizontalAlignment="Left"
+                                           Margin="35 0 0 0"
+                                           Foreground="Gray"
+                                           FontSize="16"
+                                           />
+                            </Grid>
+
+                            <Grid Grid.Row="1">
+                                <Border BorderBrush="Gray"
+                                        BorderThickness="1"
+                                        Width="250"
+                                        Height="35">
+                                    <ComboBox x:Name="cbCreatePr"
+                                              FontSize="18"
+                                              Foreground="Gray"
+                                              DisplayMemberPath="Name"
+                                              SelectedValuePath="Id"
+                                              VerticalAlignment="Center"
+                                              >
+                                        
+                                    </ComboBox>
+                                </Border>
+                            </Grid>
+                            
+                        </Grid>
+
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.7*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <TextBlock Text="Age..." 
+                                           Foreground="Gray"
+                                           FontSize="16"
+                                           Margin="10 0 0 0"
+                                           VerticalAlignment="Bottom">
+
+                                </TextBlock>
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <Border BorderBrush="Gray"
+                                        BorderThickness="1"
+                                        Width="250" 
+                                        Height="35"
+                                        CornerRadius="10">
+                                    <TextBox x:Name="tbAgeProduct"
+                                             Foreground="Gray"
+                                             FontSize="16"
+                                             VerticalAlignment="Center"
+                                             Background="Transparent"
+                                             Padding="10 0 10 0"
+                                             BorderThickness="0">
+                                        
+                                    </TextBox>
+
+                                </Border>
+                            </Grid>
+
+
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Gender..."
+                                       FontSize="16"
+                                       Foreground="Gray"
+                                       Margin="0 20 0 0"
+                                       />
+                            <RadioButton x:Name="rdMaleBtn" Content="Male"
+                                         Grid.Column="0"
+                                         Cursor="Hand"
+                                         FontSize="16"
+                                         IsChecked="True"
+                                         VerticalAlignment="Center"
+                                         VerticalContentAlignment="Center"
+                                         Margin="0 40 0 0"/>
+                            <RadioButton x:Name="rdFamaleBtn" Content="Famale"
+                                         Grid.Column="1"
+                                         FontSize="16"
+                                         Cursor="Hand"
+                                         IsChecked="False"
+                                         Margin="0 40 0 0"
+                                         VerticalAlignment="Center"
+                                         VerticalContentAlignment="Center"/>
+
+
+
+                        </Grid>
+                        
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.4*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Border>
+                                    <TextBlock Text="Breed..."
+                                               Foreground="Gray"
+                                               FontSize="16"
+                                               Margin="12 0 0 0"/>
+                                </Border>
+                            </Grid>
+
+                            <Grid Grid.Row="1">
+                                <Border Width="250"
+                                        Height="35"
+                                        BorderBrush="Gray"
+                                        BorderThickness="1"
+                                        CornerRadius="10"
+                                        VerticalAlignment="Top"
+                                        Margin="0 3 0 0">
+                                    <TextBox x:Name="tbBreed"
+                                             BorderThickness="0"
+                                             FontSize="18"
+                                             Foreground="Gray"
+                                             VerticalAlignment="Center"
+                                             Background="Transparent"
+                                             Padding="10 0 10 0"/>
+                                </Border>
+                            </Grid>
+                            
+                            
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Grid.Column="0">
+                                <Border Width="100"
+                                        Height="35"
+                                        BorderBrush="#03C988"
+                                        BorderThickness="1"
+                                        CornerRadius="10"
+                                        Background="#54B435"
+                                        HorizontalAlignment="Right"
+                                        MouseDown="Border_MouseDown"
+                                        >
+                                    <Border.Effect>
+                                        <DropShadowEffect BlurRadius="20" ShadowDepth="10"/>
+                                    </Border.Effect>
+                                    <TextBlock Text="Save"
+                                               VerticalAlignment="Center"
+                                               HorizontalAlignment="Center"
+                                               Foreground="White"
+                                               FontSize="16"/>
+                                </Border>
+                            </Grid>
+
+
+                            <Grid Grid.Column="1">
+                                <Border x:Name="CencelBrd"
+                                        Width="100"
+                                        Height="35"
+                                        MouseDown="CencelBrd_MouseDown"
+                                        BorderBrush="#E14D2A"
+                                        BorderThickness="1"
+                                        CornerRadius="10"
+                                        Background="#E0144C">
+                                    <Border.Effect>
+                                        <DropShadowEffect BlurRadius="20" ShadowDepth="10"/>
+                                    </Border.Effect>
+                                    <TextBlock Text="Cancel"
+                                               VerticalAlignment="Center"
+                                               HorizontalAlignment="Center"
+                                               Foreground="White"
+                                               FontSize="16"/>
+                                </Border>
+                            </Grid>
+
+                        </Grid>
+                        
+                    </Grid>
+
+                </Grid>
+
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

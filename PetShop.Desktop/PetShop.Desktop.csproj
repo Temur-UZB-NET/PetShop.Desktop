@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Icons\Photo.png" />
+    <None Remove="Assets\Images\Dash\cat.png" />
+    <None Remove="Assets\Images\Dash\dog.png" />
+    <None Remove="Assets\Images\Dash\fish.png" />
+    <None Remove="Assets\Images\Dash\robin.png" />
+    <None Remove="Assets\Images\IconPhoto.png" />
+    <None Remove="Assets\Images\photo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql" Version="7.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Assets\Logos\" />
+    <Folder Include="Repositories\Costumer\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Images\Dash\cat.png" />
+    <Resource Include="Assets\Images\Dash\dog.png" />
+    <Resource Include="Assets\Images\Dash\fish.png" />
+    <Resource Include="Assets\Images\Dash\robin.png" />
+    <Resource Include="Assets\Images\IconPhoto.png" />
+    <Resource Include="Assets\Images\photo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\Imit.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Imit.sql</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\Imit.sql">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Imit.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

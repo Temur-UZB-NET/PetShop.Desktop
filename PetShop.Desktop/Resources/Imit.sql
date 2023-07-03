@@ -1,0 +1,27 @@
+﻿----create table Typess
+----( id bigint generated always as identity primary key,
+--  name varchar(50) not null,
+--  image_path text ,
+--  created_at timestamp not null,
+--  updated_at timestamp not null
+--);
+
+--create table Product 
+--(
+--	id bigint generated always as identity primary key,           
+--    TypeId bigint not null references Typess(id),
+--	Name varchar(50) not null,
+--	Age bigint not null,
+--	Gender varchar(32) not null,
+--	Breed varchar(50) not null,
+--	image_path text ,
+--	created_at timestamp not null,
+--    updated_at timestamp not null
+--);
+--create table user_buy(
+--	id bigint generated always as identity primary key,
+--	name varchar(50) not null,
+--	address text not null,
+--	phone_number varchar(13) not null,
+--	price int not null
+--)

@@ -1,0 +1,157 @@
+﻿<Window x:Class="PetShop.Desktop.Windows.Buy.BuyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PetShop.Desktop.Windows.Buy"
+        mc:Ignorable="d"
+        Title="BuyWindow" 
+        Height="450" 
+        Width="400"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="#F7F7F7">
+    <Border BorderBrush="Gray"
+            BorderThickness="2"
+            CornerRadius="20"
+            Margin="30"
+            Background="#BDCDD6">
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="30" ShadowDepth="20"/>
+        </Border.Effect>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <TextBlock Text="Name..."
+                             Foreground="Gray"
+                             FontSize="18"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Top"/>
+                <Border BorderBrush="Aqua"
+                        BorderThickness="1"
+                        CornerRadius="20"
+                        Background="#F7F7F7"
+                        Width="200"
+                        Height="35">
+                    <TextBox x:Name="tbUserName"
+                             Background="Transparent"
+                             Text=""
+                             Foreground="Gray"
+                             FontSize="16"
+                             VerticalContentAlignment="Center"
+                                  BorderThickness="0"
+                             Margin="10 0 10 0"
+                             />
+                </Border>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <TextBlock Text="Address..."
+                           Foreground="Gray"
+                           FontSize="18"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Top"/>
+                <Border BorderBrush="Aqua"
+                        BorderThickness="1"
+                        CornerRadius="20"
+                        Background="#F7F7F7"
+                        Width="200"
+                        Height="35">
+                    <TextBox x:Name="tbUserAddress"
+                             Background="Transparent"
+                             Text=""
+                             Foreground="Gray"
+                             FontSize="16"
+                             VerticalContentAlignment="Center"
+                                  BorderThickness="0"
+                             Margin="10 0 10 0"
+                             />
+                </Border>
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <TextBlock Text="Phone Number..."
+                           Foreground="Gray"
+                           FontSize="18"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Top"/>
+                <Border BorderBrush="Aqua"
+                        BorderThickness="1"
+                        CornerRadius="20"
+                        Background="#F7F7F7"
+                        Width="200"
+                        Height="35">
+                    <TextBox x:Name="tbUserPhone"
+                             Background="Transparent"
+                             Text=""
+                             Foreground="Gray"
+                             FontSize="16"
+                             VerticalContentAlignment="Center"
+                                  BorderThickness="0"
+                             Margin="10 0 10 0"
+                             />
+                </Border>
+            </Grid>
+
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <TextBlock Text="Price..."
+                               Foreground="Gray"
+                               FontSize="18"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Top"/>
+                    <Border BorderBrush="Aqua"
+                            BorderThickness="1"
+                            CornerRadius="20"
+                            Background="#F7F7F7"
+                            Width="100"
+                            Height="35"
+                            HorizontalAlignment="Center">
+
+                        <TextBox  x:Name="tbPetPrice"
+                                Background="Transparent"
+                                Text=""
+                                Foreground="Gray"
+                                FontSize="16"
+                                VerticalContentAlignment="Center"
+                                  BorderThickness="0"
+                                Margin="10 0 10 0"/>
+
+                    </Border>
+                </Grid>
+
+
+                <Grid Grid.Column="1">
+                    <Border x:Name="btnBuyUser"
+                            BorderBrush="#557153"
+                            BorderThickness="1"
+                            CornerRadius="20"
+                            Width="100"
+                            Height="35"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Background="#54B435"
+                            MouseDown="btnBuyUser_MouseDown">
+                        <TextBlock Text="BUY"
+                                   Foreground="White"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   FontSize="16"/>
+                    </Border>
+                </Grid>
+                
+            </Grid>
+        </Grid>
+    </Border>
+</Window>
